@@ -27,7 +27,7 @@ const Home = () => {
       <main>
         <AboutMe
           avatar_url={userData.avatar_url}
-          bio={userData.bio}
+          bio={null}
           moreInfo={moreInfo}
         />
         <Skills />

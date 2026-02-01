@@ -29,10 +29,10 @@ export { HeroDark as Dark };
 
 /* About Me
  **************************************************************
-  Add a second paragraph for the about me section.
+  Main bio (first paragraph). Use moreInfo for a second paragraph if needed.
 */
 export const moreInfo =
-  "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, React Bootstrap, Redux, and the GitHub REST API.";
+  "AI & Computer Vision R&D Engineer (PhD) with 7+ years of experience building end-to-end machine learning systems. I specialize in bridging the gap between research and production, with a focus on Deep Learning, 3D Geometry, and modern MLOps practices. From designing hybrid CV models to industrializing scalable pipelines, I am passionate about turning complex technical challenges into production-ready solutions.";
 
 /* Skills (grouped by category; icons from https://icon-sets.iconify.design/)
  **************************************************************
