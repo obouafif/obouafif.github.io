@@ -15,7 +15,7 @@ const Publications = () => {
           <Container className="d-flex justify-content-center">
             <Title size={"h2"} text={"Publications"} />
           </Container>
-          <ul className="mt-4 list-unstyled" style={{ fontSize: "1rem" }}>
+          <ul id="publications-list" className="mt-4 list-unstyled px-2 px-md-0" style={{ fontSize: "1rem" }}>
             {publications.map((pub) => (
               <li key={pub.id} className="mb-3">
                 <a href={pub.url} target="_blank" rel="noopener noreferrer" className="text-decoration-underline">

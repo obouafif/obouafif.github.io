@@ -65,7 +65,7 @@ const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
       <Navbar
         id="nav"
         collapseOnSelect={true}
-        expand="xl"
+        expand="lg"
         expanded={isExpanded}
         bg={theme === "light" ? "light" : "dark"}
         variant={theme === "light" ? "light" : "dark"}

@@ -10,8 +10,19 @@ import { Blog, linkedinUrl, scholarUrl } from "../config";
 
 // #region styled-components
 const StyledSocialLinks = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
   a {
-    margin: 0 1rem;
+    margin: 0 0.25rem;
+  }
+  @media screen and (min-width: 576px) {
+    a {
+      margin: 0 1rem;
+    }
   }
 `;
 // #endregion

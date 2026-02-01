@@ -17,6 +17,11 @@ const StyledAboutMe = styled.section`
     width: 18rem;
     height: 18rem;
   }
+  @media screen and (max-width: 767px) {
+    p {
+      font-size: 1rem;
+    }
+  }
 `;
 // #endregion
 

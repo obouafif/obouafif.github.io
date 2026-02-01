@@ -8,8 +8,9 @@ import SocialLinks from "./SocialLinks";
 
 // #region styled-components
 const StyledFooter = styled.footer`
-  height: calc(var(--nav-height) + 1rem);
+  min-height: calc(var(--nav-height) + 1rem);
   background: var(--bs-primary);
+  flex-wrap: wrap;
 
   a {
     color: ${({ $mode }) => {
@@ -46,7 +47,7 @@ const Footer = ({ mode }) => {
   return (
     <StyledFooter
       $mode={mode}
-      className="d-flex align-items-center justify-content-center p-2"
+      className="d-flex align-items-center justify-content-center p-2 flex-wrap"
     >
       <SocialLinks />
     </StyledFooter>

@@ -19,6 +19,18 @@ Variables
 Global Styles
 ===============
 */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
 main {
   min-height: calc(100vh - 2 * var(--nav-height) - 2rem);
 }
@@ -34,12 +46,30 @@ section {
   padding: var(--nav-height) 0;
 }
 
+/* Mobile: reduce section min-height so content fits better on small screens */
+@media screen and (max-width: 767px) {
+  .section {
+    min-height: auto;
+    padding: var(--nav-height) 1rem;
+  }
+}
+
 a:hover {
   cursor: pointer;
 }
 
 .title {
   font-family: "Permanent Marker";
+}
+
+/* Scale down titles on small screens to prevent overflow */
+@media screen and (max-width: 575px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  h1.title {
+    font-size: 1.75rem;
+  }
 }
 
 .link-icons {
@@ -52,6 +82,14 @@ a:hover {
   &:hover {
     color: ${({ theme }) =>
       theme.name === "light" ? "var(--bs-light)" : "var(--bs-dark)"};
+  }
+}
+
+/* Tighter spacing for footer/social icons on small screens */
+@media screen and (max-width: 575px) {
+  .link-icons {
+    font-size: 1.75rem;
+    margin: 0 0.5rem;
   }
 }
 
@@ -73,7 +111,28 @@ a:hover {
   .link-icons:hover {
     color: var(--bs-primary);
   }
+}
+
+/* Skills section: smaller icons and labels on mobile */
+@media screen and (max-width: 575px) {
+  #skills .display-4 {
+    font-size: 2rem;
   }
+  #skills figcaption {
+    font-size: 0.75rem;
+  }
+}
+
+/* Publications: readable text and wrap long links on mobile */
+@media screen and (max-width: 767px) {
+  #publications ul {
+    font-size: 0.9rem;
+    padding-left: 0;
+  }
+  #publications a {
+    word-break: break-word;
+  }
+}
 `;
 
 export default GlobalStyles;
