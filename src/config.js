@@ -54,20 +54,8 @@ export const skillCategories = [
     category: "AI & Vision Frameworks",
     skills: [
       { id: 1, skill: <Icon icon="simple-icons:pytorch" className="display-4" />, name: "PyTorch" },
-      { id: 2, skill: <Icon icon="simple-icons:pytorch" className="display-4" />, name: "LibTorch" },
-      { id: 3, skill: <Icon icon="simple-icons:tensorflow" className="display-4" />, name: "TensorFlow" },
-      { id: 4, skill: <Icon icon="simple-icons:tensorflow" className="display-4" />, name: "TensorFlow.JS" },
-      { id: 5, skill: <Icon icon="simple-icons:keras" className="display-4" />, name: "Keras" },
-      { id: 6, skill: <Icon icon="simple-icons:scikitlearn" className="display-4" />, name: "Sklearn" },
-      { id: 7, skill: <Icon icon="simple-icons:opencv" className="display-4" />, name: "OpenCV" },
-      { id: 8, skill: <Icon icon="simple-icons:opengl" className="display-4" />, name: "OpenGL" },
-    ],
-  },
-  {
-    category: "ML Optimization",
-    skills: [
-      { id: 1, skill: <Icon icon="simple-icons:ray" className="display-4" />, name: "Ray Tune" },
-      { id: 2, skill: <Icon icon="simple-icons:pandas" className="display-4" />, name: "Pandas" },
+      { id: 2, skill: <Icon icon="simple-icons:scikitlearn" className="display-4" />, name: "Sklearn" },
+      { id: 3, skill: <Icon icon="simple-icons:opencv" className="display-4" />, name: "OpenCV" },
     ],
   },
   {
@@ -76,14 +64,54 @@ export const skillCategories = [
       { id: 1, skill: <Icon icon="bi:git" className="display-4" />, name: "Git" },
       { id: 2, skill: <Icon icon="simple-icons:dvc" className="display-4" />, name: "DVC" },
       { id: 3, skill: <Icon icon="simple-icons:pytest" className="display-4" />, name: "Pytest" },
-      { id: 4, skill: <Icon icon="simple-icons:docker" className="display-4" />, name: "Docker" },
-      { id: 5, skill: <Icon icon="simple-icons:poetry" className="display-4" />, name: "Poetry" },
     ],
   },
 ];
 
 // Resume link (string - "https://YourResumeUrl") - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 export const resume = null;
+
+// Google Scholar profile URL (shown in footer)
+export const scholarUrl = "https://scholar.google.com/citations?user=1UqWuJsAAAAJ&hl=fr";
+
+/* Publications
+ **************************************************************
+  { title, authors, url, venue, year }
+*/
+export const publications = [
+  {
+    id: 1,
+    title: "Realistic transformation of facial and vocal smiles in real-time audiovisual streams",
+    authors: "Pablo Arias et al.",
+    url: "https://hal.science/hal-01712834/document",
+    venue: "HAL",
+    year: "2018",
+  },
+  {
+    id: 2,
+    title: "Hybrid approach for 3D head reconstruction: Using neural networks and visual geometry",
+    authors: "Oussema Bouafif, Bogdan Khomutenko, Mohamed Daoudi",
+    url: "https://arxiv.org/pdf/2104.13710",
+    venue: "arXiv",
+    year: "2021",
+  },
+  {
+    id: 3,
+    title: "Monocular 3D Head Reconstruction via Prediction and Integration of Normal Vector Field",
+    authors: "Oussema Bouafif, Bogdan Khomutenko, Mohamed Daoudi",
+    url: "https://hal.science/hal-02928494v1/file/VISAPP2020-2.pdf",
+    venue: "HAL, VISAPP 2020",
+    year: "2020",
+  },
+  {
+    id: 4,
+    title: "Proposition d'approches utilisant les réseaux de neurones profonds et les méthodes géométriques pour la reconstruction d'un visage 3D à partir d'une seule image",
+    authors: "Oussema Bouafif",
+    url: "https://theses.hal.science/tel-03351834/",
+    venue: "Thèse CIFRE",
+    year: "2021",
+  },
+];
 
 /* Projects
  ************************************************************** 

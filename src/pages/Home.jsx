@@ -6,10 +6,11 @@ import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import Publications from "../components/Publications";
 import Contact from "../components/Contact";
 import BackToTop from "../components/BackToTop";
 // Config
-import { filteredProjects, moreInfo } from "../config";
+import { moreInfo } from "../config";
 // Utils
 import { updateTitle } from "../utils";
 
@@ -31,7 +32,8 @@ const Home = () => {
           moreInfo={moreInfo}
         />
         <Skills />
-        <Projects filteredProjects={filteredProjects} />
+        <Projects />
+        <Publications />
         <Contact />
       </main>
       <BackToTop />

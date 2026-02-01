@@ -6,7 +6,7 @@ import { useGetUsersQuery, useGetSocialsQuery } from "../app/apiSlice";
 // Icons
 import { Icon } from "@iconify/react";
 // Config
-import { Blog, linkedinUrl } from "../config";
+import { Blog, linkedinUrl, scholarUrl } from "../config";
 
 // #region styled-components
 const StyledSocialLinks = styled.div`
@@ -45,6 +45,15 @@ const SocialLinks = () => {
           className="link-icons"
         >
           <Icon icon="fa-brands:linkedin" />
+        </a>
+      )}
+      {scholarUrl && (
+        <a
+          href={scholarUrl}
+          aria-label="Check out my Google Scholar profile."
+          className="link-icons"
+        >
+          <Icon icon="simple-icons:googlescholar" />
         </a>
       )}
       {isSuccess &&
