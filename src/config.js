@@ -23,6 +23,9 @@ export const navLogo = newLogo;
 */
 export const Blog = null;
 
+// LinkedIn profile URL (shown in footer next to GitHub)
+export const linkedinUrl = "https://www.linkedin.com/in/oussema-bouafif/";
+
 // Hero images (imported above - lines 8-9)
 export { HeroLight as Light };
 export { HeroDark as Dark };
