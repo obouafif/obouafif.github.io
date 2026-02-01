@@ -7,7 +7,7 @@ import { Element } from "react-scroll";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Title from "./Title";
 // Config
-import { skillData, resume } from "../config";
+import { skillCategories, resume } from "../config";
 
 // #region component
 const Skills = () => {
@@ -18,20 +18,23 @@ const Skills = () => {
       <section className="section">
         <Container className="text-center">
           <Container className="d-flex justify-content-center">
-            <Title size={"h2"} text={"Skills"} />
+            <Title size={"h2"} text={"Technical Skills"} />
           </Container>
-          <Row className="mt-3 align-items-center">
-            {skillData.map((skills) => {
-              return (
-                <Col xs={4} key={skills.id} className="my-md-5">
-                  <figure>
-                    {skills.skill}
-                    <figcaption>{skills.name}</figcaption>
-                  </figure>
-                </Col>
-              );
-            })}
-          </Row>
+          {skillCategories.map((cat) => (
+            <div key={cat.category} className="mt-4">
+              <h5 className="mb-3">{cat.category}</h5>
+              <Row className="align-items-center">
+                {cat.skills.map((s) => (
+                  <Col xs={4} md={2} key={`${cat.category}-${s.id}`} className="my-md-5">
+                    <figure className="mb-0">
+                      {s.skill}
+                      <figcaption>{s.name}</figcaption>
+                    </figure>
+                  </Col>
+                ))}
+              </Row>
+            </div>
+          ))}
           {resume && (
             <a href={resume}>
               <Button

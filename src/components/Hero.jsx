@@ -1,29 +1,16 @@
 import React from "react";
 // Styles
-import styled, { keyframes } from "styled-components";
-// State
-import PropTypes from "prop-types";
+import styled from "styled-components";
 // Icons
 import { Icon } from "@iconify/react";
 // Images
-import Logo from "../images/logo.svg";
 import { Light, Dark } from "../config";
 // Components
 import { useErrorBoundary } from "react-error-boundary";
 import { Link } from "react-scroll";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import SocialLinks from "./SocialLinks";
 
 // #region styled-components
-const spin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
 const StyledHero = styled.header`
   position: relative;
   display: grid;
@@ -65,12 +52,6 @@ const StyledHero = styled.header`
     height: 10rem;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-    .hero-img {
-      animation: ${spin} infinite 20s linear;
-    }
-  }
-
   @media screen and (min-width: 1180px) {
     &::before {
       background: ${({ theme }) =>
@@ -94,33 +75,12 @@ const StyledHero = styled.header`
 // #endregion
 
 // #region component
-const propTypes = {
-  name: PropTypes.string,
-};
-
-const Hero = ({ name }) => {
+const Hero = () => {
   const { showBoundary } = useErrorBoundary();
 
   return (
     <StyledHero>
-      <Container>
-        <Row className="align-items-center text-center">
-          <Col>
-            <h1 className="mb-3 display-3 title">
-              {name === null ? "null" : name}
-            </h1>
-            <div className="d-flex align-items-center justify-content-center">
-              <SocialLinks />
-            </div>
-          </Col>
-          <Col className="d-none d-md-block">
-            <img
-              src={Logo}
-              alt="React Logo"
-              className="w-75 mx-auto hero-img"
-            />
-          </Col>
-        </Row>
+      <Container className="d-flex flex-column h-100 justify-content-end">
         <Row className="align-items-end down-container">
           <Col className="m-4 text-center">
             <Link to={"About"} className="link-icons">
@@ -144,7 +104,6 @@ const Hero = ({ name }) => {
   );
 };
 
-Hero.propTypes = propTypes;
 // #endregion
 
 export default Hero;

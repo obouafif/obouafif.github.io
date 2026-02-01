@@ -1,6 +1,6 @@
 {
   "name": "github-react-portfolio-template",
-  "homepage": "https://YourUserName.github.io/your-repo/",
+  "homepage": "https://obouafif.github.io/",
   "version": "1.0.4",
   "private": true,
   "dependencies": {
@@ -29,8 +29,7 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run build && git add docs && git commit -m \"Deploy\" --allow-empty && git push",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -61,21 +61,23 @@ Add your GitHub username once and all of your info will automatically be updated
    export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
    ```
 
-### Deploy
+### Deploy (single `main` branch)
 
-A helpful guide for Create React App deployments with GitHub Pages can be found [here](https://create-react-app.dev/docs/deployment#github-pages).
+The build is output to `docs/` and served from the `main` branch (no `gh-pages` branch).
 
-1. Update the homepage value ([package.json](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/package.json#L3) line 3)
+1. **Homepage** in [package.json](package.json): set `"homepage": "https://YourUserName.github.io/"` (user site) or `"https://YourUserName.github.io/your-repo/"` (project site).
 
-   ```json
-   "homepage": "https://YourUserName.github.io/your-repo/",
-   ```
+2. **GitHub Pages**: Repo → **Settings → Pages** → **Build and deployment**:
+   - Source: **Deploy from a branch**
+   - Branch: **main**
+   - Folder: **/docs**
+   - Save
 
-2. Run the deploy command
-
+3. **Deploy**: builds to `docs/`, commits, and pushes to `main`:
    ```bash
    npm run deploy
    ```
+   You can delete the `gh-pages` branch if it exists; it is no longer used.
 
 ### Customization Options
 
