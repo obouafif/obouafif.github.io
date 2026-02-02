@@ -71,6 +71,9 @@ export const skillCategories = [
 // Resume link (string - "https://YourResumeUrl") - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 export const resume = null;
 
+// CV PDF (place the file in public/ and use a relative path like "/cv.pdf")
+export const cvPdf = "/cv.pdf";
+
 // Google Scholar profile URL (shown in footer)
 export const scholarUrl = "https://scholar.google.com/citations?user=1UqWuJsAAAAJ&hl=fr";
 

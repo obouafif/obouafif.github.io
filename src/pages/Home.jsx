@@ -7,6 +7,7 @@ import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Publications from "../components/Publications";
+import Resume from "../components/Resume";
 import Contact from "../components/Contact";
 import BackToTop from "../components/BackToTop";
 // Config
@@ -34,6 +35,7 @@ const Home = () => {
         <Skills />
         <Projects />
         <Publications />
+        <Resume />
         <Contact />
       </main>
       <BackToTop />
