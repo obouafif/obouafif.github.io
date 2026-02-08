@@ -1158,6 +1158,13 @@ section .container {
   color: #ffffff;
 }
 
+.publication-thumb {
+  margin-top: 14px;
+  width: min(100%, 420px);
+  border-radius: 8px;
+  border: 1px solid var(--line-muted);
+}
+
 .resume-btn {
   min-width: 180px;
 }
