@@ -1,1 +1,327 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#000000"/><meta property="og:title" content="My GitHub Portfolio"/><meta property="og:type" content="website"/><meta property="og:description" content="Built with React and the GitHub REST API."/><meta property="og:image" content=""/><meta property="og:url" content=""/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image:alt" content="React and GitHub"/><meta property="og:site_name" content="GitHub Portfolio"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"/><link rel="manifest" href="/manifest.json"/><title>React App</title><script defer="defer" src="/static/js/main.204e9d44.js"></script><link href="/static/css/main.cdc29534.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Oussema Bouafif | Portfolio</title>
+  <meta name="description"
+    content="AI &amp; Computer Vision R&amp;D Engineer (PhD) with 7+ years of experience building end-to-end machine learning systems.">
+  <meta name="keywords" content="AI, Computer Vision, Deep Learning, MLOps, Portfolio">
+  <meta property="og:title" content="Oussema Bouafif | Portfolio">
+  <meta property="og:description"
+    content="AI &amp; Computer Vision R&amp;D Engineer (PhD) with 7+ years of experience building end-to-end machine learning systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://obouafif.github.io/">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Oussema Bouafif | Portfolio">
+
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+        var theme = stored || (prefersLight ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header" class="header-tops">
+    <div class="container">
+      <h1><a href="index.html">Oussema Bouafif</a></h1>
+      <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#header"><span>Home</span></a></li>
+          <li><a href="#about"><span>About Me</span></a></li>
+          <li><a href="#skills"><span>Skills</span></a></li>
+          <li><a href="#projects"><span>Projects</span></a></li>
+          <li><a href="#publications"><span>Publications</span></a></li>
+          <li><a href="#resume"><span>Resume</span></a></li>
+          <li><a href="#contact"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/oussema-bouafif/" target="_blank" rel="noopener noreferrer"
+          class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/obouafif" target="_blank" rel="noopener noreferrer" class="github"><i
+            class="bx bxl-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=1UqWuJsAAAAJ&amp;hl=fr" target="_blank"
+          rel="noopener noreferrer" class="google"><i class="bx bxs-graduation"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+    <i class="bx bx-moon"></i>
+    <span class="theme-toggle-text">Dark</span>
+  </button>
+
+  <section id="about" class="about">
+    <div class="about-me container">
+      <div class="section-title">
+        <h2>About Me</h2>
+      </div>
+
+      <div class="row align-items-center about-row">
+        <div class="col-lg-4 text-center" data-aos="fade-right">
+          <img src="assets/img/profile-oussema_clean.png" class="img-fluid about-logo" alt="Oussema Bouafif">
+        </div>
+        <div class="col-lg-8 content about-text" data-aos="fade-left">
+          <p class="mb-0">
+            AI &amp; Computer Vision R&amp;D Engineer (PhD) with 7+ years of experience designing and deploying end-to-end machine learning systems. My work sits at the intersection of deep learning and geometric vision, with strong expertise in 3D reconstruction, face analysis, and hybrid CV models. I focus on bridging research and production by industrializing robust ML pipelines using modern MLOps practices, turning advanced algorithms into reliable, scalable, production-ready solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Skills</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box skill-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="skill-title">Languages</h4>
+            <p class="skill-text">Python, C/C++, Matlab, LaTeX</p>
+          </div>
+          <div class="col-md-12 mt-4 mt-md-0 icon-box skill-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="skill-title">AI &amp; Vision Frameworks</h4>
+            <p class="skill-text">PyTorch, LibTorch, TensorFlow, Sklearn, OpenCV, OpenGL</p>
+          </div>
+          <div class="col-md-12 mt-4 mt-md-0 icon-box skill-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="skill-title">Version Control &amp; Deployment</h4>
+            <p class="skill-text">Git, DVC, Pytest, Poetry, UV</p>
+          </div>
+          <div class="col-md-12 mt-4 mt-md-0 icon-box skill-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="skill-title">Certifications</h4>
+            <p class="skill-text">
+              <a href="https://www.aws.com/certification/verify?code=0df975b95c27405aaff6d1c4fadaf769"
+                target="_blank" rel="noopener noreferrer"><strong>AWS Certified AI Practitioner</strong></a> - Active,
+              obtained 11/2025
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box text-center coming-soon-box" data-aos="fade-up"
+            data-aos-delay="100">
+            <h4 class="coming-soon-title">Coming Soon</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Publications</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box publication-card" data-aos="fade-up" data-aos-delay="100">
+            <h4>
+              <a href="https://hal.science/hal-01712834/document" target="_blank" rel="noopener noreferrer">
+                Realistic transformation of facial and vocal smiles in real-time audiovisual streams
+              </a>
+            </h4>
+            <p><em>Pablo Arias, Catherine Soladie, <strong>Oussema Bouafif</strong>, Axel Roebel, Renaud Seguier,
+                Jean-Julien Aucouturier</em> | IEEE Transactions on Affective Computing, 2018, PP (99), pp.1-1.</p>
+          </div>
+
+          <div class="col-md-12 mt-4 mt-md-0 icon-box publication-card" data-aos="fade-up" data-aos-delay="100">
+            <h4>
+              <a href="https://arxiv.org/pdf/2104.13710" target="_blank" rel="noopener noreferrer">
+                Hybrid approach for 3D head reconstruction: Using neural networks and visual geometry
+              </a>
+            </h4>
+            <p><em><strong>Oussema Bouafif</strong>, Bogdan Khomutenko, Mohamed Daoudi</em> | 25th International
+              Conference on Pattern Recognition (ICPR 2020)</p>
+          </div>
+
+          <div class="col-md-12 mt-4 mt-md-0 icon-box publication-card" data-aos="fade-up" data-aos-delay="100">
+            <h4>
+              <a href="https://hal.science/hal-02928494v1/file/VISAPP2020-2.pdf" target="_blank"
+                rel="noopener noreferrer">
+                Monocular 3D Head Reconstruction via Prediction and Integration of Normal Vector Field
+              </a>
+            </h4>
+            <p><em><strong>Oussema Bouafif</strong>, Bogdan Khomutenko, Mohamed Daoudi</em> | 15th International
+              Conference on Computer Vision, Theory and Applications., (VISAPP 2020)</p>
+          </div>
+
+          <div class="col-md-12 mt-4 mt-md-0 icon-box publication-card" data-aos="fade-up" data-aos-delay="100">
+            <h4>
+              <a href="https://theses.hal.science/tel-03351834/" target="_blank" rel="noopener noreferrer">
+                Proposition d'approches utilisant les réseaux de neurones profonds et les méthodes géométriques pour
+                la reconstruction d'un visage 3D à partir d'une seule image
+              </a>
+            </h4>
+            <p><em><strong>Oussema Bouafif</strong></em> | Thèse CIFRE | 2021</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Resume</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box text-center" data-aos="fade-up" data-aos-delay="100">
+            <a class="btn btn-success resume-btn"
+              href="https://drive.google.com/file/d/1gsFPS-Dt4kU-FiXrKNplUkS7NisLjHBG/view?usp=sharing"
+              target="_blank" rel="noopener noreferrer">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>Social Profiles</h3>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/oussema-bouafif/" target="_blank" rel="noopener noreferrer"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/obouafif" target="_blank" rel="noopener noreferrer" class="github"><i
+                  class="bx bxl-github"></i></a>
+              <a href="https://scholar.google.com/citations?user=1UqWuJsAAAAJ&amp;hl=fr" target="_blank"
+                rel="noopener noreferrer" class="google"><i class="bx bxs-graduation"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>Send a Message</h3>
+            <p>Use the form below to reach out directly.</p>
+          </div>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/xojjerap" method="POST" class="php-email-form mt-4">
+        <div class="form-row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="text-center"><button type="submit">Submit</button></div>
+      </form>
+    </div>
+  </section>
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script>
+    var typed = new Typed('.typing', {
+      strings: [
+        "AI Engineer",
+        "Computer Vision Engineer",
+        "Developer",
+        "Coder",
+      ],
+      loop: true,
+      typeSpeed: 65,
+      backSpeed: 65
+    });
+  </script>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var button = document.getElementById("theme-toggle");
+      if (!button) return;
+
+      var icon = button.querySelector("i");
+      var text = button.querySelector(".theme-toggle-text");
+
+      function applyTheme(theme) {
+        var safeTheme = theme === "light" ? "light" : "dark";
+        root.setAttribute("data-theme", safeTheme);
+        var isLight = safeTheme === "light";
+        button.setAttribute("aria-pressed", String(isLight));
+        if (icon) icon.className = isLight ? "bx bx-sun" : "bx bx-moon";
+        if (text) text.textContent = isLight ? "Light" : "Dark";
+      }
+
+      try {
+        var stored = localStorage.getItem("theme");
+        if (stored === "light" || stored === "dark") {
+          applyTheme(stored);
+        } else {
+          applyTheme(root.getAttribute("data-theme"));
+        }
+      } catch (e) {
+        applyTheme(root.getAttribute("data-theme"));
+      }
+
+      button.addEventListener("click", function () {
+        var current = root.getAttribute("data-theme");
+        var next = current === "light" ? "dark" : "light";
+        applyTheme(next);
+        try {
+          localStorage.setItem("theme", next);
+        } catch (e) {}
+      });
+    })();
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
